@@ -5,6 +5,12 @@ class world {
     new orc(),
     new orc()
 ];
+  clouds = [
+    new Cloud(),
+];
+backgroundObjects =[
+  new BackgroundObject('/img/background.png'),
+]
   canvas;
   ctx;
 
@@ -14,13 +20,22 @@ class world {
     this.draw();
   }
 
-
-
-
   draw() {
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    this.ctx.drawImage(this.character_var.img, this.character_var.x, this.character_var.y, this.character_var.height, this.character_var.width);
+    this.addToMap(this.character_var);
+
+    this.enemies.forEach(enemy => {
+      this.addToMap(enemy);
+    });
+
+    this.clouds.forEach(cloud => {
+      this.addToMap(cloud);
+    });
+
+    this.backgroundObjects.forEach((bgo) => {
+      this.addToMap(bgo);
+    });
 
 
     // Draw function in loop
@@ -29,4 +44,9 @@ class world {
       self.draw();
     });
     }
+
+    addToMap(mo){
+      this.ctx.drawImage(mo.img, mo.x, mo.y, mo.height, mo.width);
+  }
+
   }
