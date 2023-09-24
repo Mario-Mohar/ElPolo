@@ -23,6 +23,10 @@ backgroundObjects =[
   draw() {
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+    this.backgroundObjects.forEach((bgo) => {
+      this.addToMap(bgo);
+    });
+
     this.addToMap(this.character_var);
 
     this.enemies.forEach(enemy => {
@@ -31,10 +35,6 @@ backgroundObjects =[
 
     this.clouds.forEach(cloud => {
       this.addToMap(cloud);
-    });
-
-    this.backgroundObjects.forEach((bgo) => {
-      this.addToMap(bgo);
     });
 
 
