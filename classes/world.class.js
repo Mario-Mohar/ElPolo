@@ -9,7 +9,7 @@ class world {
     new Cloud(),
 ];
 backgroundObjects =[
-  new BackgroundObject('/img/background.png'),
+  new BackgroundObject('/img/5_background/first_half_background.png'),
 ]
   canvas;
   ctx;
