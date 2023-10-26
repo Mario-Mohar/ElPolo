@@ -3,6 +3,7 @@ class Cloud extends MoveableObject {
     width = 500;
     height = 300;
     y = 50;
+    speed = 0.15;
 
 
     constructor() {
@@ -12,10 +13,8 @@ class Cloud extends MoveableObject {
         this.animate();
     }
 
-    animate() {                     // 60 FPS der Wolken
-        setInterval( () => {
-            this.x -= 1;
-        }, 1000 / 60);
+    animate() {
+        this.moveLeft();
     }
 
 }

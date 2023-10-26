@@ -1,8 +1,8 @@
  class character extends MoveableObject {
 
-    height = 350;
-    width = 350;
-    y = 240;
+    height = 100;
+    width = 300;
+    y = 250;
     Images_Walking = [
             './img/2_character_pepe/2_walk/W-21.png',
             './img/2_character_pepe/2_walk/W-22.png',
@@ -24,10 +24,11 @@
     animate(){
 
         setInterval( () => {
-        let path = this.Images_Walking[this.currentImage];
-        this.img = this.imgCache[path];
-        this.currentImage++;
-    }, 1000);
+            let i = this.currentImage % this.Images_Walking.length;
+            let path = this.Images_Walking[i];
+            this.img = this.imgCache[path];
+            this.currentImage++;
+        }, 100);
     }
 
     jump() {
