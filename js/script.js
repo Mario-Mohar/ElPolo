@@ -1,6 +1,6 @@
 let canvas;
 let world_var;
-let keyboard = new Keyboard();
+let keyboard = new keyboard();
 
 
 function init() {
