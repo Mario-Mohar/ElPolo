@@ -7,7 +7,7 @@ class MoveableObject {
     imgCache = {};
     currentImage = 0;
     speed = 0.15;
-
+    otherDirection = false;
 
 
 // loadImg('img/orc.png')

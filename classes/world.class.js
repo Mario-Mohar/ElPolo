@@ -9,7 +9,7 @@ class world {
     new Cloud(),
 ];
 backgroundObjects =[
-  new BackgroundObject('/img/5_background/first_half_background.png'),
+  new BackgroundObject('./img/5_background/first_half_background.png'),
 ]
   canvas;
   ctx;
@@ -25,7 +25,7 @@ backgroundObjects =[
 
   setWorld(){
     this.character_var.world = this;
-  }
+   }
 
   draw() {
     this.ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -53,6 +53,7 @@ backgroundObjects =[
     }
 
     addToMap(mo){
+      
       this.ctx.drawImage(mo.img, mo.x, mo.y, mo.height, mo.width);
   }
 

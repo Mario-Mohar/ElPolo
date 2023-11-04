@@ -12,23 +12,23 @@ function init() {
 }
 
 window.addEventListener("keydown", (e) => {
-    if(e.Code === "KeyA") {
+    if(e.code === "KeyA") {
         keyboard.LEFT = true;
     }
 
-    if(e.Code === "KeyW") {
+    if(e.code === "KeyW") {
         keyboard.UP = true;
     }
     
-    if(e.Code === "KeyD") {
+    if(e.code === "KeyD") {
         keyboard.RIGHT = true;
     }
 
-    if(e.Code === "KeyS") {
+    if(e.code === "KeyS") {
         keyboard.DOWN = true;
     }
 
-    if(e.Code === "Space") {
+    if(e.code === "Space") {
         keyboard.SPACE = true;
     }
 
@@ -36,23 +36,23 @@ window.addEventListener("keydown", (e) => {
 });
 
 window.addEventListener("keyup", (e) => {
-    if(e.Code === "KeyA") {
+    if(e.code === "KeyA") {
         keyboard.LEFT = false;
     }
 
-    if(e.Code === "KeyW") {
+    if(e.code === "KeyW") {
         keyboard.UP = false;
     }
     
-    if(e.Code === "KeyD") {
+    if(e.code === "KeyD") {
         keyboard.RIGHT = false;
     }
 
-    if(e.Code === "KeyS") {
+    if(e.code === "KeyS") {
         keyboard.DOWN = false;
     }
 
-    if(e.Code === "Space") {
+    if(e.code === "Space") {
         keyboard.SPACE = false;
     }
 
